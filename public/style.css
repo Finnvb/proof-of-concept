@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat','insaniburger', sans-serif;
+}
+
+:root{
+    --darkBlue: #023047;
+    --lightBlue: #8ECAE6;
+    --blue: #219EBC;
+    --orange: #FFB703;
+    --white: #FFFFFF;
+}
+
+body{
+    background-color: var(--darkBlue);
+}
+
+
+p{
+    color: var(--white);
+}
+
+img{
+    /* position: relative; */
+}
+
+h1{
+    font-family: 'insaniburger';
+    font-size: 32px;
+    color: var(--white);
+    position: absolute;
+    /* text-align:center; */
+    /* top: 30px; */
+    /* width: 100% */
+    /* right: 0; */
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
