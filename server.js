@@ -20,16 +20,18 @@ app.set('views', './views')
 
 app.get('/', async (req, res) => {
 
-     res.render('index')
-      
-     
-   })
+  res.render('index')
+})
+
+app.get('/activity', async (req, res) => {
+
+  res.render('activity')
+})
 
 
 
 
-
-   app.set('port', process.env.PORT || 1337)
+app.set('port', process.env.PORT || 1337)
 
 const server = app.listen(app.get('port'), () => {
   console.log(`Application started on port: ${app.get('port')}`)
