@@ -28,8 +28,10 @@ app.get('/activity', async (req, res) => {
   res.render('activity')
 })
 
+app.get('/team', async (req, res) => {
 
-
+  res.render('team')
+})
 
 app.set('port', process.env.PORT || 1337)
 

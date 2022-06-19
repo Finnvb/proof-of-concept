@@ -59,7 +59,7 @@ margin-top: 2rem;
 .button{
     height: 3rem;
     margin: 1.5rem 0;
-    padding: 0.5rem;
+    padding: 1rem;
     background-color: var(--orange);
     border-radius: 10px;
     text-decoration: none;
