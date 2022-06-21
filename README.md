@@ -32,11 +32,23 @@ Dit project is gemaakt met NodeJS, EJS en een REST API. Hieronder een lijst van 
 - 🧁 CSS
 - 🦾 Javascript
 
-## Installatie
+## Installatie en gebruik
 
-## Gebruik
+```
+# Cloning the repository
+git clone https://github.com/Finnvb/proof-of-concept.git
+
+# Install NPM packages
+npm install
+
+# Run local server
+nodemon start
+```
 
 ## Bronnen
+
+- [UXWing](https://uxwing.com/)
+- [Google Fonts ](https://fonts.google.com/?query=montserrat)
 
 ## Licentie
 
