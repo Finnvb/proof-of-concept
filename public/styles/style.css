@@ -47,7 +47,7 @@ body {
     margin-top: 2rem;
 }
 
-h2{
+h2 {
     font-family: 'montserrat';
     font-weight: bold;
     font-size: 1rem;
@@ -63,7 +63,7 @@ h2{
 
 .button {
     height: 3rem;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     background-color: var(--orange);
     border-radius: 10px;
     text-decoration: none;
@@ -73,6 +73,7 @@ h2{
     align-items: center;
     font-weight: bold;
     margin-top: 2rem;
+
 }
 
 .button:hover {
@@ -110,7 +111,7 @@ button {
     transition: 0.4s;
 }
 
-button:hover{
+button:hover {
     transform: scale(110%);
 }
 
@@ -119,7 +120,7 @@ button:hover{
     margin-top: 2rem;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -128,7 +129,7 @@ form{
 }
 
 
-#time{
+#time {
     width: 10rem;
     height: 2rem;
     background-color: var(--orange);
@@ -140,13 +141,13 @@ form{
     color: var(--darkBlue);
 }
 
-label{
+label {
     text-align: center;
     margin-top: 1.5rem;
-    
+
 }
 
-input{
+input {
     width: 10rem;
     height: 2rem;
     background-color: var(--orange);
@@ -157,6 +158,28 @@ input{
     font-weight: bold;
     color: var(--darkBlue);
     margin-top: 0.2rem;
-    
+
 }
 
+.match-container div {
+    display: flex;
+    justify-content: space-between;
+  
+    width: 15rem;
+    text-align: center;
+
+}
+
+
+.match-container div p, h2, h1{
+    margin: 2rem 0;
+}
+
+
+.match-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+}

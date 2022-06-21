@@ -44,6 +44,11 @@ app.get('/createMatch', async (req, res) => {
   res.render('createMatch')
 })
 
+app.get('/activeMatch', async (req, res) => {
+
+  res.render('activeMatch')
+})
+
 app.set('port', process.env.PORT || 1337)
 
 const server = app.listen(app.get('port'), () => {
