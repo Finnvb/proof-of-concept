@@ -7,7 +7,7 @@ const scoreTeam2 = document.getElementById('score-team2')
 
 
 
-buttonTeam1.addEventListener('click', () => {
+buttonTeam1.addEventListener('dblclick', () => {
    scoreTeam1.innerHTML++;
   });
 
@@ -25,3 +25,33 @@ buttonTeam1.addEventListener('click', () => {
     if(scoreTeam2.innerHTML > 0)
     scoreTeam2.innerHTML--;
    });
+
+
+
+
+  //  const testinggg = document.getElementById('time')
+
+// console.log(testinggg.value)
+
+   function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 60 * 1,
+        display = document.querySelector('#timer');
+    startTimer(fiveMinutes, display);
+};

@@ -5,7 +5,9 @@ startButton.addEventListener('click', () => {
 });
 
 
+const testing = document.getElementById('time')
 
+console.log(testing.value)
 
 
 
