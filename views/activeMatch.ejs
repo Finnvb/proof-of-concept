@@ -9,23 +9,31 @@
 
 
 <div>
-    <h2 id="test">Team 1</h2>
+    <h2>Team 1</h2>
 
     <h2>Team 2</h2>
 </div>
 
 <div>
-    <p>2</p>
+    <p id="score-team1">0</p>
     <p> - </p>
-    <p>1</p>
+    <p id="score-team2">0</p>
 </div>
 
 <div>
-  <button class="button">Point scored</button>
-  <button class="button">Point scored</button>
+  <button id="button-team1"><img  src="/assets/plusPoint.svg" alt="plus point"></button>
+  <button id="button-team2"><img  src="/assets/plusPoint.svg" alt="plus point"></button>
+
+</div>
+
+<div>
+    <button id="minus-button-team1"><img  src="/assets/minus.svg" alt="minus point"></button>
+    <button id="minus-button-team2"><img  src="/assets/minus.svg" alt="minus point"></button>
 </div>
 
 </section>
+
+<script src="/scripts/match.js"></script>
 </body>
 
 <%- include('./partials/foot') %>
