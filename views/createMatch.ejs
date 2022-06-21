@@ -1,0 +1,46 @@
+<%- include('./partials/head') %>
+
+
+<body>
+
+    <section class="container">
+
+        <h1 class="header">Create a match</h1>
+        <form class="container" action="#" id="myForm">
+
+            <label for="activity">
+                <h2>Select activity</h2>
+
+                <select name="activities" id="activity">
+                    <option value="Ping Pong">Ping Pong</option>
+                    <option value="Basketball">Basketball</option>
+                    <option value=" Football">Football</option>
+                    <option value="Tennis">Tennis</option>
+                    <option value="Hockey">Hockey</option>
+                    <option value="Volleyball">Volleyball</option>
+                </select>
+            </label>
+
+            <label for="time">
+                <h2>total minutes</h2>
+            </label>
+            <input type="number" id="time" name="time" min="1" max="30">
+
+
+            <label for="team1Name">
+                <h2>Team 1 name </h2>
+            </label>
+            <input type="text" name="team1Name" id="team1Name">
+
+            <label for="team2Name">
+                <h2>Team 2 name</h2>
+            </label>
+            <input type="text" name="team2Name" id="team2Name">
+
+            <input class="button" type='submit' value="Start">
+        </form>
+    </section>
+</body>
+
+
+<%- include('./partials/foot') %>

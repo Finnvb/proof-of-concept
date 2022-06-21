@@ -1,0 +1,28 @@
+{
+    "matches": [
+        {
+            "matchId" : 0,
+            "activity" : "ping-pong",
+            "team1" : "rood",
+            "playersTeam1" : ["Klaas", "Jan"],
+            "team1score" : 3,
+            "team2" : "blauw",
+            "playersTeam2" : ["Isa", "Belle"],
+            "team2score" : 1,
+            "tijd" : 15
+
+        },
+        {
+        "matchId" : 0,
+        "activity" : "volleyball",
+        "team1" : "zwart",
+        "playersTeam1" : ["Joe", "David", "Jip"],
+        "team1score" : 21,
+        "team2" : "wit",
+        "playersTeam2" : ["Isa", "Belle", "Peter"],
+        "team2score" : 15,
+        "tijd" : 30
+        }
+
+    ]
+}

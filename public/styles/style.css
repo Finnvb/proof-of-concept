@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -9,7 +9,7 @@
     color: var(--white);
 }
 
-:root{
+:root {
     --darkBlue: #023047;
     --lightBlue: #8ECAE6;
     --blue: #219EBC;
@@ -17,38 +17,43 @@
     --white: #FFFFFF;
 }
 
-body{
+body {
     background-color: var(--darkBlue);
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     margin-top: 2rem;
-    height: 50vh;
 }
 
 
-.logo-title{
+.logo-title {
     font-family: 'insaniburger';
     font-size: 30px;
     color: var(--white);
     position: absolute;
     margin-top: 1.5rem;
     margin-right: 1.5rem;
-    
+
 }
 
-.header{
-font-family: 'montserrat';
-font-weight: bold;
-font-size: 2rem;
-margin-top: 2rem;
+.header {
+    font-family: 'montserrat';
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 2rem;
 }
 
-.button-container{
+h2{
+    font-family: 'montserrat';
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,10 +61,9 @@ margin-top: 2rem;
     margin-top: 2rem;
 }
 
-.button{
+.button {
     height: 3rem;
-    margin: 1.5rem 0;
-    padding: 1rem;
+    padding: 0 1rem;
     background-color: var(--orange);
     border-radius: 10px;
     text-decoration: none;
@@ -68,16 +72,63 @@ margin-top: 2rem;
     display: flex;
     align-items: center;
     font-weight: bold;
+    margin-top: 2rem;
 }
 
-.button:hover{
+.button:hover {
     background-color: #bc8803;
 }
 
 
 
 
-#activity{
+#activity {
+    width: 10rem;
+    height: 2rem;
+    background-color: var(--orange);
+    border-radius: 10px;
+    border: 1px solid #715100;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--darkBlue);
+    margin-top: 0.2rem;
+}
+
+option {
+    font-weight: bold;
+    color: var(--darkBlue);
+
+}
+
+
+
+button {
+    border: none;
+    background-color: var(--darkBlue);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button:hover{
+    transform: scale(110%);
+}
+
+
+.add-player {
+    margin-top: 2rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+
+#time{
     width: 10rem;
     height: 2rem;
     background-color: var(--orange);
@@ -89,9 +140,23 @@ margin-top: 2rem;
     color: var(--darkBlue);
 }
 
-option{
+label{
+    text-align: center;
+    margin-top: 1.5rem;
+    
+}
+
+input{
+    width: 10rem;
+    height: 2rem;
+    background-color: var(--orange);
+    border-radius: 10px;
+    border: 1px solid #715100;
+    text-align: center;
+    font-size: 1rem;
     font-weight: bold;
     color: var(--darkBlue);
-
+    margin-top: 0.2rem;
+    
 }
 

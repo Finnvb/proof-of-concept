@@ -4,6 +4,7 @@ const app = express()
 
 //parses user data
 const bodyParser = require('body-parser')
+const req = require('express/lib/request')
 const urlencodedParser = bodyParser.urlencoded({
   extended: false
 })
@@ -33,9 +34,24 @@ app.get('/team', async (req, res) => {
   res.render('team')
 })
 
+app.get('/teamEdit', async (req, res) => {
+
+  res.render('teamEdit')
+})
+
+app.get('/createMatch', async (req, res) => {
+
+  res.render('createMatch')
+})
+
 app.set('port', process.env.PORT || 1337)
 
 const server = app.listen(app.get('port'), () => {
   console.log(`Application started on port: ${app.get('port')}`)
   console.log('http://localhost:1337');
 })
+
+
+
+
+
