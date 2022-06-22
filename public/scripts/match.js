@@ -7,21 +7,21 @@ const scoreTeam2 = document.getElementById('score-team2')
 
 
 
-buttonTeam1.addEventListener('dblclick', () => {
+buttonTeam1.addEventListener('click', () => {
    scoreTeam1.innerHTML++;
   });
 
-  buttonTeam2.addEventListener('dblclick', () => {
+  buttonTeam2.addEventListener('click', () => {
     scoreTeam2.innerHTML++;
    });
 
-   minusButtonTeam1.addEventListener('dblclick', () => {
+   minusButtonTeam1.addEventListener('click', () => {
    if(scoreTeam1.innerHTML > 0)
      scoreTeam1.innerHTML--;
    
    });
 
-   minusButtonTeam2.addEventListener('dblclick', () => {
+   minusButtonTeam2.addEventListener('click', () => {
     if(scoreTeam2.innerHTML > 0)
     scoreTeam2.innerHTML--;
    });

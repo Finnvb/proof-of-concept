@@ -6,10 +6,10 @@
     <section class="container">
 
         <h1 class="header">Create a match</h1>
-        <form class="container" action="#" id="myForm">
+        <form class="container" action="/createMatch" id="myForm" method="POST">
 
             <label for="activity">Select activity</label>
-            <select name="activities" id="activity">
+            <select name="activity" id="activity">
                 <option value="Ping Pong">Ping Pong</option>
                 <option value="Basketball">Basketball</option>
                 <option value=" Football">Football</option>
@@ -18,19 +18,23 @@
                 <option value="Volleyball">Volleyball</option>
             </select>
 
+            <!-- <label for="activity">Activity</label>
+          
+            <input type="text" id="activity" name="activity"> -->
 
             <label for="time">total minutes</label>
           
-            <input type="number" id="time" name="time" min="1" max="30" value="0">
+            <input type="number" id="time" name="speeltijd" min="1" max="30" value="0">
 
 
-            <label for="team1Name">Team 1 name</label>
-            <input type="text" name="team1Name" id="team1Name" autocomplete="off">
+            <label for="team1">Team 1 name</label>
+            <input type="text" name="team1Name" id="team1" autocomplete="off">
 
-            <label for="team2Name">Team 2 name</label>
-            <input type="text" name="team2Name" id="team2Name" autocomplete="off">
+            <label for="team2">Team 2 name</label>
+            <input type="text" name="team2Name" id="team2" autocomplete="off">
 
             <input class="button" id="submit-btn" type='submit' value="Start">
+            <!-- <button type="submit">Start</button> -->
 
         </form>
     </section>

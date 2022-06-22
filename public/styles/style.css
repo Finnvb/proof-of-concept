@@ -19,6 +19,11 @@
 
 body {
     background-color: var(--darkBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
@@ -66,13 +71,16 @@ h2 {
     padding: 0 0.5rem;
     background-color: var(--orange);
     border-radius: 10px;
+    width: 100px;
     text-decoration: none;
     color: var(--darkBlue);
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
     font-weight: bold;
     margin-top: 2rem;
+    text-align: center;
 
 }
 
@@ -166,7 +174,7 @@ input {
 .match-container div {
     display: flex;
     justify-content: space-between;
-  
+
     width: 15rem;
     text-align: center;
     margin: 2.5rem 0;
@@ -175,23 +183,67 @@ input {
 }
 
 
-.match-container h1{
+.match-container h1 {
     font-size: 2rem;
     margin-top: 2rem;
 }
 
 
-.match-container{
+.match-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     margin-top: 2rem;
-   
+
 }
 
 
 
-#score-team1, #score-team2{
+#score-team1,
+#score-team2 {
     width: 3rem;
+}
+
+
+
+#confettiBG {
+    background-image: url("/assets/confetti.svg");
+    width: 250px;
+    height: 250px;
+    z-index: -1;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.go-back{
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    background-color: var(--orange);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    margin-left: 3rem;
+
+}
+
+.go-back:hover{
+    background-color: #bc8803;
+}
+
+.container-test{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
