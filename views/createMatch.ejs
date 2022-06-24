@@ -6,7 +6,11 @@
     <section class="container">
 
         <h1 class="header">Create a match</h1>
-        <form class="container" action="/createMatch" id="myForm" method="POST">
+        <form class="container" action="/match" id="myForm" method="POST">
+
+            <!-- <label for="matchId">matchId</label>
+          
+            <input type="number" id="matchId" name="matchId" > -->
 
             <label for="activity">Select activity</label>
             <select name="activity" id="activity">
@@ -22,16 +26,37 @@
           
             <input type="text" id="activity" name="activity"> -->
 
-            <label for="time">total minutes</label>
-          
-            <input type="number" id="time" name="speeltijd" min="1" max="30" value="0">
-
-
             <label for="team1">Team 1 name</label>
-            <input type="text" name="team1Name" id="team1" autocomplete="off">
+            <input type="text" name="team1" id="team1" autocomplete="off">
+
+            <label for="playersTeam1">player Team 1</label>
+            <input type="text" name="playersTeam1" id="playersTeam1" autocomplete="off">
+
+            
+            <label for="scoreTeam1">score t1</label>
+            <input type="number" name="scoreTeam1" id="scoreTeam1">
+
+
+        
 
             <label for="team2">Team 2 name</label>
-            <input type="text" name="team2Name" id="team2" autocomplete="off">
+            <input type="text" name="team2" id="team2" autocomplete="off">
+
+            <label for="playersTeam2">player Team 2</label>
+            <input type="text" name="playersTeam2" id="playersTeam2" autocomplete="off">
+
+
+            <label for="scoreTeam2">score t2</label>
+            <input type="number" name="scoreTeam2" id="scoreTeam2">
+
+            <label for="speeltijd">total minutes</label>
+          
+            <input type="number" id="speeltijd" name="speeltijd" min="1" max="30" value="0">
+
+            
+            <label for="datum">date</label>
+          
+            <input type="text" id="datum" name="datum">
 
             <input class="button" id="submit-btn" type='submit' value="Start">
             <!-- <button type="submit">Start</button> -->

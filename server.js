@@ -10,11 +10,13 @@ const URL = 'https://score.api.fdnd.nl/v1/match'
 console.log(URL)
 //parses user data
 const bodyParser = require('body-parser')
+const { response } = require('express')
 // const req = require('express/lib/request')
 const urlencodedParser = bodyParser.urlencoded({
   extended: false
 })
 
+// app.use(express.urlencoded({extended: true}))  
 
 // Serve public files
 app.use(express.static('public'))
@@ -61,7 +63,9 @@ app.get('/victory', async (req, res) => {
 
 
 
-app.post('/createMatch', urlencodedParser, (req, res) => {
+
+
+app.post('/match', urlencodedParser, (req, res) => {
   console.log('body', req.body);
   // const fields = req.body
 
@@ -77,16 +81,16 @@ app.post('/createMatch', urlencodedParser, (req, res) => {
   fetchJson(URL, postData).then(function (data) {
     console.log(data);
     res.render('activeMatch', {
-      matchId: 3,
-      activity: data.activity,
-      team1: data.team1,
-      //playersTeam1: ,
-      //scoreTeam1:'3',
-      team2: data.team2,
-      //playersTeam2: 'dave', 
-      //scoreTeam2:'8',
-      speeltijd: data.speeltijd,
-      //datum:'00000'
+      // matchId: 3,
+      // activity: data.activity,
+      // team1: data.team1,
+      // //playersTeam1: ,
+      // //scoreTeam1:'3',
+      // team2: data.team2,
+      // //playersTeam2: 'dave', 
+      // //scoreTeam2:'8',
+      // speeltijd: data.speeltijd,
+      // datum:'2022-05-12' 
     })
   })
 })
@@ -112,6 +116,6 @@ const server = app.listen(app.get('port'), () => {
 
 async function fetchJson(url, data = {}) {
   return await fetch(url, data)
-    .then((response) => response.json())
+    .then((response) =>  response.json())
     .catch((error) => error)
 }
