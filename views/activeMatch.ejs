@@ -7,18 +7,28 @@
 
 <h1 id="timer"> <%- scoreData[scoreData.length - 1].speeltijd %> </h1>
 
-
+<!-- <div></div> -->
 
 <div>
-    <h2>Team 1</h2>
+    <h2> Team <%- scoreData[scoreData.length - 1].team1 %> </h2>
+    <p> VS </p>
+    <h2>Team <%- scoreData[scoreData.length - 1].team2 %></h2>
 
-    <h2>Team 2</h2>
+    
 </div>
 
 <div>
-    <p id="score-team1">0</p>
+
+    <p> <%- scoreData[scoreData.length - 1].playersTeam1 %> </p>
+
+    <p> <%- scoreData[scoreData.length - 1].playersTeam2 %> </p>
+
+</div>
+
+<div>
+    <p id="score-team1"> <%- scoreData[scoreData.length - 1].scoreTeam1 %> </p>
     <p> - </p>
-    <p id="score-team2">0</p>
+    <p id="score-team2"> <%- scoreData[scoreData.length - 1].scoreTeam2 %> </p>
 </div>
 
 <div>

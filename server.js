@@ -11,7 +11,8 @@ console.log(URL)
 //parses user data
 const bodyParser = require('body-parser')
 const { response } = require('express')
-const { match } = require('assert')
+const { match } = require('assert');
+const { time } = require('console');
 // const req = require('express/lib/request')
 const urlencodedParser = bodyParser.urlencoded({
   extended: false
@@ -45,13 +46,7 @@ app.get('/createMatch', async (req, res) => {
 })
 
 
-app.get('/activeMatch', async (req, res) => {
-  scoreData = await fetchJson(URL).then(json => json.data)
-  // console.log(scoreData)
-  res.render('activeMatch'),{
-    scoreData
-  }
-})
+
 
 app.get('/victory', async (req, res) => {
 
@@ -59,6 +54,34 @@ app.get('/victory', async (req, res) => {
 })
 
 
+app.get('/activeMatch', async (req, res) => {
+  
+  scoreData = await fetchJson(URL).then(json => json.data)
+  // console.log(scoreData)
+  res.render('activeMatch'),{
+    scoreData
+  }
+})
+
+function startTimer(duration) {
+      let timer = duration, minutes, seconds;
+setInterval(function () {
+  minutes = parseInt(timer / 60, 10);
+  seconds = parseInt(timer % 60, 10);
+
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+console.log(`${minutes} : ${seconds}`)
+  
+  // display.textContent = minutes + ":" + seconds;
+
+  if (--timer < 0) {
+      timer = duration;
+  }
+}, 1000);
+}
+
+startTimer(60)
 
 
 
@@ -75,7 +98,7 @@ app.post('/activeMatch', urlencodedParser, async (req, res) => {
 
   await fetchJson(URL, postData).then(function (data) {
     console.log(data);
-    res.render('activeMatch', {
+    res.render('createMatch', {
       // matchId: 3,
       // activity: 'req.body',
       // team1: data.team1,
@@ -91,7 +114,6 @@ app.post('/activeMatch', urlencodedParser, async (req, res) => {
     })
   })
 })
-
 
 
 
@@ -116,3 +138,7 @@ async function fetchJson(url, data = {}) {
     .then((response) =>  response.json())
     .catch((error) => error)
 }
+
+
+
+
