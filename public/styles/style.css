@@ -23,7 +23,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .container {
@@ -220,7 +220,7 @@ input {
 
 
 
-.go-back{
+.go-back {
     width: 4rem;
     height: 4rem;
     padding: 1rem;
@@ -231,14 +231,15 @@ input {
     align-items: center;
     align-self: flex-start;
     margin-left: 3rem;
+    margin-top: 1rem;
 
 }
 
-.go-back:hover{
+.go-back:hover {
     background-color: #bc8803;
 }
 
-.container-test{
+.container-test {
 
     display: flex;
     flex-direction: column;
@@ -246,4 +247,31 @@ input {
     align-items: center;
     width: 100vw;
     height: 100vh;
+}
+
+
+
+.matchResults{
+    background-color: var(--orange);
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    list-style: none;
+}
+
+
+.matchResults li{
+    color: var(--darkBlue);
+    padding: 0.3rem 0;
+}
+
+
+
+.list-container {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    color: var(--darkBlue);
 }

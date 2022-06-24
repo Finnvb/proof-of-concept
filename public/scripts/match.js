@@ -5,7 +5,7 @@ const minusButtonTeam1 = document.getElementById('minus-button-team1')
 const minusButtonTeam2 = document.getElementById('minus-button-team2')
 const scoreTeam1 = document.getElementById('score-team1')
 const scoreTeam2 = document.getElementById('score-team2')
-
+const timer = document.querySelector('#timer')
 
 
 buttonTeam1.addEventListener('click', () => {
@@ -28,25 +28,33 @@ buttonTeam1.addEventListener('click', () => {
    });
 
 
-//    function startTimer(duration, display) {
-//     let timer = duration, minutes, seconds;
-    // setInterval(function () {
-    //     minutes = parseInt(timer / 60, 10);
-    //     seconds = parseInt(timer % 60, 10);
+   function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
 
-    //     minutes = minutes < 10 ? "0" + minutes : minutes;
-    //     seconds = seconds < 10 ? "0" + seconds : seconds;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
 
-    //     display.textContent = minutes + ":" + seconds;
+        display.textContent = minutes + ":" + seconds;
 
-    //     if (--timer < 0) {
-    //         timer = duration;
-    //     }
-    // }, 1000);
-// }
+        if (--timer <= 0) {
+          
+            timerComplete();
+            timer = 0
+           
+        }
+    }, 1000);
+}
 
-// window.onload = function () {
-//     var fiveMinutes = 60 * 1,
-//         display = document.querySelector('#timer');
-//     startTimer(fiveMinutes, display);
-// };
+window.onload = function () {
+    let totalTime = 60 * timer.innerHTML,
+        display = document.querySelector('#timer');
+    startTimer(totalTime, display);
+};
+
+
+function timerComplete(){
+  document.location.href = "victory";
+}

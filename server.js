@@ -1,5 +1,5 @@
 const express = require('express')
-const fs = require('fs')
+// const fs = require('fs')
 const app = express()
 
 const fetch = (...args) => import('node-fetch').then(({
@@ -11,8 +11,8 @@ console.log(URL)
 //parses user data
 const bodyParser = require('body-parser')
 const { response } = require('express')
-const { match } = require('assert');
-const { time } = require('console');
+// const { match } = require('assert');
+// const { time } = require('console');
 // const req = require('express/lib/request')
 const urlencodedParser = bodyParser.urlencoded({
   extended: false
@@ -46,7 +46,12 @@ app.get('/createMatch', async (req, res) => {
 })
 
 
-
+app.get('/matchResults', async (req, res) => {
+  scoreData = await fetchJson(URL).then(json => json.data)
+  res.render('matchResults'),{
+    scoreData 
+  }
+})
 
 app.get('/victory', async (req, res) => {
 
@@ -63,25 +68,40 @@ app.get('/activeMatch', async (req, res) => {
   }
 })
 
-function startTimer(duration) {
-      let timer = duration, minutes, seconds;
-setInterval(function () {
-  minutes = parseInt(timer / 60, 10);
-  seconds = parseInt(timer % 60, 10);
 
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-  seconds = seconds < 10 ? "0" + seconds : seconds;
-console.log(`${minutes} : ${seconds}`)
+// app.get(`${URL}/matchId`, (request, response) => {
+//   fetchJson(`https://score.api.fdnd.nl/v1/match/${request.params.quoteId}`).then(function (
+//     fetchJson
+//   ) {
+//     response.render('/', {
+//       title: 'Dit is een enkele match'
+//       // quote: jsonData.data[0],
+    
+//     })
+//   })
+// })
+
+
+// function startTimer(duration) {
+//       let timer = duration, minutes, seconds;
+// setInterval(function () {
+//   minutes = parseInt(timer / 60, 10);
+//   seconds = parseInt(timer % 60, 10);
+
+//   minutes = minutes < 10 ? "0" + minutes : minutes;
+//   seconds = seconds < 10 ? "0" + seconds : seconds;
+// console.log(`${minutes} : ${seconds}`)
   
-  // display.textContent = minutes + ":" + seconds;
+//   // display.textContent = minutes + ":" + seconds;
 
-  if (--timer < 0) {
-      timer = duration;
-  }
-}, 1000);
-}
+//   if (--timer < 0) {
+//       timer = duration;
+//   }
+// }, 1000);
+// }
 
-startTimer(60)
+
+// startTimer(60)
 
 
 
@@ -110,6 +130,7 @@ app.post('/activeMatch', urlencodedParser, async (req, res) => {
       // speeltijd : data.speeltijd
       // datum:'2022-05-12' 
       // p:data.speeltijd
+      
    
     })
   })
