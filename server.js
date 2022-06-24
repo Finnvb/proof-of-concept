@@ -28,35 +28,28 @@ app.set('views', './views')
 
 
 app.get('/', async (req, res) => {
-
-  res.render('index')
+  scoreData = await fetchJson(URL).then(json => json.data)
+  console.log(scoreData)
+  res.render('index'),{
+    scoreData
+  }
 })
 
-app.get('/activity', async (req, res) => {
 
-  res.render('activity')
-})
-
-app.get('/team', async (req, res) => {
-
-  res.render('team')
-})
-
-app.get('/teamEdit', async (req, res) => {
-
-  res.render('teamEdit')
-})
 
 app.get('/createMatch', async (req, res) => {
-
-  res.render('createMatch')
+  scoreData = await fetchJson(URL).then(json => json.data)
+  res.render('createMatch'),{
+    scoreData
+  }
 })
 
+
 app.get('/activeMatch', async (req, res) => {
-  match = await fetchJson(URL).then(json => json.data)
-  console.log(match)
+  scoreData = await fetchJson(URL).then(json => json.data)
+  // console.log(scoreData)
   res.render('activeMatch'),{
-    match
+    scoreData
   }
 })
 
@@ -69,11 +62,9 @@ app.get('/victory', async (req, res) => {
 
 
 
-app.post('/activeMatch', urlencodedParser, (req, res) => {
-  console.log('body', req.body);
-  // const fields = req.body
+app.post('/activeMatch', urlencodedParser, async (req, res) => {
+  // console.log('body', req.body);
 
-  // fields.
   const postData = {
     method: 'POST',
     body: JSON.stringify(req.body),
@@ -82,7 +73,7 @@ app.post('/activeMatch', urlencodedParser, (req, res) => {
     }
   }
 
-  fetchJson(URL, postData).then(function (data) {
+  await fetchJson(URL, postData).then(function (data) {
     console.log(data);
     res.render('activeMatch', {
       // matchId: 3,
@@ -93,8 +84,9 @@ app.post('/activeMatch', urlencodedParser, (req, res) => {
       // team2: data.team2,
       // //playersTeam2: 'dave', 
       // //scoreTeam2:'8',
-      speeltijd : data.speeltijd
+      // speeltijd : data.speeltijd
       // datum:'2022-05-12' 
+      // p:data.speeltijd
    
     })
   })
