@@ -1,3 +1,4 @@
+
 const buttonTeam1 = document.getElementById('button-team1')
 const buttonTeam2 = document.getElementById('button-team2')
 const minusButtonTeam1 = document.getElementById('minus-button-team1')
@@ -26,12 +27,6 @@ buttonTeam1.addEventListener('click', () => {
     scoreTeam2.innerHTML--;
    });
 
-
-
-
-  //  const testinggg = document.getElementById('time')
-
-// console.log(testinggg.value)
 
    function startTimer(duration, display) {
     let timer = duration, minutes, seconds;

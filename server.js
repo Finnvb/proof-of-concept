@@ -11,6 +11,7 @@ console.log(URL)
 //parses user data
 const bodyParser = require('body-parser')
 const { response } = require('express')
+const { match } = require('assert')
 // const req = require('express/lib/request')
 const urlencodedParser = bodyParser.urlencoded({
   extended: false
@@ -52,8 +53,11 @@ app.get('/createMatch', async (req, res) => {
 })
 
 app.get('/activeMatch', async (req, res) => {
-
-  res.render('activeMatch')
+  match = await fetchJson(URL).then(json => json.data)
+  console.log(match)
+  res.render('activeMatch'),{
+    match
+  }
 })
 
 app.get('/victory', async (req, res) => {
@@ -65,7 +69,7 @@ app.get('/victory', async (req, res) => {
 
 
 
-app.post('/match', urlencodedParser, (req, res) => {
+app.post('/activeMatch', urlencodedParser, (req, res) => {
   console.log('body', req.body);
   // const fields = req.body
 
@@ -82,15 +86,16 @@ app.post('/match', urlencodedParser, (req, res) => {
     console.log(data);
     res.render('activeMatch', {
       // matchId: 3,
-      // activity: data.activity,
+      // activity: 'req.body',
       // team1: data.team1,
       // //playersTeam1: ,
-      // //scoreTeam1:'3',
+      // scoreTeam1:'4',
       // team2: data.team2,
       // //playersTeam2: 'dave', 
       // //scoreTeam2:'8',
-      // speeltijd: data.speeltijd,
+      speeltijd : data.speeltijd
       // datum:'2022-05-12' 
+   
     })
   })
 })
