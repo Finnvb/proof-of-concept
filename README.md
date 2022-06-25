@@ -11,9 +11,10 @@ Met dit project kun je gemakkelijk de score bijhouden van een sportactiviteit, l
   * [Licentie](#licentie)
 
 ## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+
+![afbeelding](https://user-images.githubusercontent.com/26089533/175791729-d4fe6a96-57f5-4ad1-b8ab-f23b89bf941a.png)
+
+[Live versie](https://poc-score.herokuapp.com/)
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
