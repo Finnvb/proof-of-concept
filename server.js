@@ -30,7 +30,7 @@ app.set('views', './views')
 
 app.get('/', async (req, res) => {
   scoreData = await fetchJson(URL).then(json => json.data)
-  console.log(scoreData)
+  // console.log(scoreData)
   res.render('index'),{
     scoreData
   }
@@ -54,8 +54,9 @@ app.get('/matchResults', async (req, res) => {
 })
 
 app.get('/victory', async (req, res) => {
-
+  scoreData = await fetchJson(URL).then(json => json.data)
   res.render('victory')
+  scoreData 
 })
 
 
@@ -69,39 +70,17 @@ app.get('/activeMatch', async (req, res) => {
 })
 
 
-// app.get(`${URL}/matchId`, (request, response) => {
-//   fetchJson(`https://score.api.fdnd.nl/v1/match/${request.params.quoteId}`).then(function (
-//     fetchJson
-//   ) {
-//     response.render('/', {
-//       title: 'Dit is een enkele match'
-//       // quote: jsonData.data[0],
-    
-//     })
-//   })
+
+
+// app.get(`/:matchId`, (request, response) => {
+//   const test = fetchJson(`https://score.api.fdnd.nl/v1/match/${request.params.matchId}`)
+
+//   const id = request.params.matchId
+
+//   console.log(test)
 // })
 
 
-// function startTimer(duration) {
-//       let timer = duration, minutes, seconds;
-// setInterval(function () {
-//   minutes = parseInt(timer / 60, 10);
-//   seconds = parseInt(timer % 60, 10);
-
-//   minutes = minutes < 10 ? "0" + minutes : minutes;
-//   seconds = seconds < 10 ? "0" + seconds : seconds;
-// console.log(`${minutes} : ${seconds}`)
-  
-//   // display.textContent = minutes + ":" + seconds;
-
-//   if (--timer < 0) {
-//       timer = duration;
-//   }
-// }, 1000);
-// }
-
-
-// startTimer(60)
 
 
 
@@ -117,7 +96,7 @@ app.post('/activeMatch', urlencodedParser, async (req, res) => {
   }
 
   await fetchJson(URL, postData).then(function (data) {
-    console.log(data);
+    // console.log(data);
     res.render('createMatch', {
       // matchId: 3,
       // activity: 'req.body',
@@ -141,8 +120,6 @@ app.post('/activeMatch', urlencodedParser, async (req, res) => {
 
 
 
-
-
 app.set('port', process.env.PORT || 1337)
 
 const server = app.listen(app.get('port'), () => {
@@ -159,7 +136,4 @@ async function fetchJson(url, data = {}) {
     .then((response) =>  response.json())
     .catch((error) => error)
 }
-
-
-
 

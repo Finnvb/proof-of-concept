@@ -1,7 +1,7 @@
 <%- include('./partials/head') %>
 
 <body>
-
+ 
 
     <section class="container-test">
         <a href="/" class="go-back">
@@ -9,7 +9,10 @@
         </a>
 
         <div id="confettiBG">
-            <h1>Team 2 won!</h1>
+
+            <% if(2>1){%>
+            <h1><%= scoreData[scoreData.length - 1].team2 %> won!</h1>
+            <%  }%>
         </div>
 
         <button class="button">Share</button>
@@ -19,5 +22,5 @@
 </body>
 
 
-
+<script src="/scripts/testing.js" type="module"></script>
 <%- include('./partials/foot') %>
