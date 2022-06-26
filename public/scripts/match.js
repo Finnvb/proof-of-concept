@@ -7,8 +7,8 @@ const minusButtonTeam2 = document.getElementById('minus-button-team2')
 const scoreTeam1 = document.getElementById('score-team1')
 const scoreTeam2 = document.getElementById('score-team2')
 const timer = document.querySelector('#timer')
-export let score1 = 0
-export let score2 = 0
+let score1 = 0
+let score2 = 0
 console.log(buttonTeam1)
 
 
@@ -75,4 +75,11 @@ window.onload = function () {
 
 function timerComplete(){
   document.location.href = "victory";
+  // matchSection.classList.add('hide')
+  // victorySection.classList.add('show')
 }
+
+
+
+
+export {score1, score2};

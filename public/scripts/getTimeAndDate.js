@@ -10,8 +10,6 @@ datum.style.display = 'none'
 
 
 
-console.log(speeltijd.value)
-
 datum.value = timeAndDate()
 
 

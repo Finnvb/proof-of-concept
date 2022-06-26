@@ -11,9 +11,7 @@ console.log(URL)
 //parses user data
 const bodyParser = require('body-parser')
 const { response } = require('express')
-// const { match } = require('assert');
-// const { time } = require('console');
-// const req = require('express/lib/request')
+
 const urlencodedParser = bodyParser.urlencoded({
   extended: false
 })

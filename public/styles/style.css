@@ -241,7 +241,7 @@ input {
 }
 
 .container-test {
-
+    /* display: none; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -282,3 +282,15 @@ input {
     color: var(--darkBlue);
 }
 
+
+/* 
+
+.hide{
+    display: none;
+
+}
+
+
+.show{
+    display: flex;
+} */
