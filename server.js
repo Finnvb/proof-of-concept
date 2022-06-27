@@ -43,6 +43,13 @@ app.get('/createMatch', async (req, res) => {
   }
 })
 
+app.get('/readyUp', async (req, res) => {
+  scoreData = await fetchJson(URL).then(json => json.data)
+  res.render('readyUp'),{
+    scoreData
+  }
+})
+
 
 app.get('/matchResults', async (req, res) => {
   scoreData = await fetchJson(URL).then(json => json.data)
@@ -53,7 +60,18 @@ app.get('/matchResults', async (req, res) => {
 
 app.get('/victory', async (req, res) => {
   scoreData = await fetchJson(URL).then(json => json.data)
-  res.render('victory')
+  res.render('victory'),{
+    scoreData 
+  }
+})
+
+
+app.get('/victory:winner', async (req, res) => {
+  //req.params.winner
+  scoreData = await fetchJson(URL).then(json => json.data)
+  res.render('victory', {
+    winner: req.params.winner || null
+  })
   scoreData 
 })
 
@@ -66,19 +84,6 @@ app.get('/activeMatch', async (req, res) => {
     scoreData
   }
 })
-
-
-
-
-// app.get(`/:matchId`, (request, response) => {
-//   const test = fetchJson(`https://score.api.fdnd.nl/v1/match/${request.params.matchId}`)
-
-//   const id = request.params.matchId
-
-//   console.log(test)
-// })
-
-
 
 
 
@@ -95,7 +100,7 @@ app.post('/activeMatch', urlencodedParser, async (req, res) => {
 
   await fetchJson(URL, postData).then(function (data) {
     // console.log(data);
-    res.render('createMatch', {
+    res.render('readyUp', {
       // matchId: 3,
       // activity: 'req.body',
       // team1: data.team1,

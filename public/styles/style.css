@@ -283,7 +283,11 @@ input {
 }
 
 
-/* 
+.scoreTeam1, .scoreTeam2{
+
+    text-align: center;
+}
+
 
 .hide{
     display: none;
@@ -293,4 +297,4 @@ input {
 
 .show{
     display: flex;
-} */
+}

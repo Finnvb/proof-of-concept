@@ -1,7 +1,6 @@
 <%- include('./partials/head') %>
 
 <body>
- 
 
     <section class="container-test">
         <a href="/" class="go-back">
@@ -10,9 +9,12 @@
 
         <div id="confettiBG">
 
-            <% if(2>1){%>
-            <h1><%= scoreData[scoreData.length - 1].team2 %> won!</h1>
-            <%  }%>
+         
+            <h1 class="scoreTeam1">Team <%= scoreData[scoreData.length - 1].team1 %> won! <br> <%= scoreData[scoreData.length - 1].playersTeam1 %> </h1>
+         
+
+            <h1 class="scoreTeam2">Team <%= scoreData[scoreData.length - 1].team2 %> won! <br> <%= scoreData[scoreData.length - 1].playersTeam2 %></h1>
+           
         </div>
 
         <button class="button">Share</button>
@@ -22,5 +24,7 @@
 </body>
 
 
-<script src="/scripts/testing.js" type="module"></script>
+<!-- <script src="/scripts/match.js"></script> -->
+<script src="/scripts/testing.js"></script>
+
 <%- include('./partials/foot') %>

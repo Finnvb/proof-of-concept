@@ -1,28 +1,32 @@
 
+let  buttonTeam1 = document.getElementById('button-team1')
+let buttonTeam2 = document.getElementById('button-team2')
+let minusButtonTeam1 = document.getElementById('minus-button-team1')
+let minusButtonTeam2 = document.getElementById('minus-button-team2')
+let scoreTeam1 = document.getElementById('score-team1')
+let scoreTeam2 = document.getElementById('score-team2')
+let timer = document.querySelector('#timer')
 
-const buttonTeam1 = document.getElementById('button-team1')
-const buttonTeam2 = document.getElementById('button-team2')
-const minusButtonTeam1 = document.getElementById('minus-button-team1')
-const minusButtonTeam2 = document.getElementById('minus-button-team2')
-const scoreTeam1 = document.getElementById('score-team1')
-const scoreTeam2 = document.getElementById('score-team2')
-const timer = document.querySelector('#timer')
-let score1 = 0
+let score1 = 0;
+// sessionStorage.setItem("score1", score1)
 let score2 = 0
-console.log(buttonTeam1)
+// sessionStorage.setItem("score2", score2)
 
+// console.log(buttonTeam1)
 
 
 buttonTeam1.addEventListener('click', () => {
    scoreTeam1.innerHTML++;
    score1++;
    console.log(`Score t1: ${score1}`)
+   sessionStorage.setItem("score1", score1);
   });
 
   buttonTeam2.addEventListener('click', () => {
     scoreTeam2.innerHTML++;
     score2++;
     console.log(`Score t2: ${score2}`)
+    sessionStorage.setItem("score2", score2);
    });
 
    minusButtonTeam1.addEventListener('click', () => {
@@ -30,6 +34,7 @@ buttonTeam1.addEventListener('click', () => {
      scoreTeam1.innerHTML--;
      score1--;
      console.log(`Score t1: ${score1}`)
+     sessionStorage.setItem("score1", score1);
    
    });
 
@@ -38,13 +43,8 @@ buttonTeam1.addEventListener('click', () => {
     scoreTeam2.innerHTML--;
     score2--
     console.log(`Score t2: ${score2}`)
+    sessionStorage.setItem("score2", score2);
    });
-
-
-
-
-
-
 
    function startTimer(duration, display) {
     let timer = duration, minutes, seconds;
@@ -67,19 +67,23 @@ buttonTeam1.addEventListener('click', () => {
 }
 
 window.onload = function () {
-    let totalTime = 60 * timer.innerHTML,
+    let totalTime = 10 * timer.innerHTML,
         display = document.querySelector('#timer');
     startTimer(totalTime, display);
 };
 
 
 function timerComplete(){
+  // Check wie de winnaar is en haal de ID op
+  // Voeg dat id hieronder in de url in..
+  // document.location.href = "victory/"+id;
   document.location.href = "victory";
+
+// Doe een fetch PATCH op een nieuwe route waarbij je in JSON de betreffende data meestuurt
+
   // matchSection.classList.add('hide')
   // victorySection.classList.add('show')
 }
 
 
 
-
-export {score1, score2};
