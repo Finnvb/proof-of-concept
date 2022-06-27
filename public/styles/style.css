@@ -125,9 +125,9 @@ button:hover {
 }
 
 
-.add-player {
+/* .add-player {
     margin-top: 2rem;
-}
+} */
 
 form {
     display: flex;
@@ -282,6 +282,13 @@ input {
     color: var(--darkBlue);
 }
 
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
 .scoreTeam1, .scoreTeam2{
 
@@ -297,4 +304,23 @@ input {
 
 .show{
     display: flex;
+}
+
+#confettiBG p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.delete{
+    background-color: var(--darkBlue);
+    padding: 1rem;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.delete:hover{
+    
+    background-color: var(--darkBlue);
+    /* border: 1px solid var(--darkBlue); */
+    color: var(--orange);
 }

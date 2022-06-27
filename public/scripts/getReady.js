@@ -1,14 +1,12 @@
 let timer = document.querySelector('#timer')
 
 
-
 function startTimer(duration, display) {
     let timer = duration, minutes, seconds;
     setInterval(function () {
-        // minutes = parseInt(timer / 60, 10);
+
         seconds = parseInt(timer % 60, 10);
 
-        // minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ?  + seconds : seconds;
 
         display.textContent =  seconds;
@@ -30,8 +28,5 @@ window.onload = function () {
 
 
 function timerComplete(){
-  // Check wie de winnaar is en haal de ID op
-  // Voeg dat id hieronder in de url in..
-  // document.location.href = "victory/"+id;
   document.location.href = "activeMatch";
 }

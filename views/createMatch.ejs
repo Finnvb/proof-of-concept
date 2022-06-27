@@ -8,9 +8,6 @@
         <h1 class="header">Create a match</h1>
         <form class="container" action="/activeMatch" id="matchForm" method="POST">
  
-            <!-- <label for="matchId">matchId</label>
-          
-            <input type="number" id="matchId" name="matchId" > -->
 
             <label for="activity">Select activity</label>
             <select name="activity" id="activity">
@@ -22,9 +19,6 @@
                 <option value="Volleyball">Volleyball</option>
             </select>
 
-            <!-- <label for="activity">Activity</label>
-          
-            <input type="text" id="activity" name="activity"> -->
 
             <label for="team1">Team 1 name</label>
             <input type="text" name="team1" id="team1" autocomplete="off" required>
@@ -46,6 +40,7 @@
             <input type="text" name="playersTeam2" id="playersTeam2" autocomplete="off" required>
 
 
+            
     
             <input type="hidden" name="scoreTeam2" id="scoreTeam2" value="0">
 
@@ -54,14 +49,12 @@
             <input type="number" id="speeltijd" name="speeltijd" min="1" max="30" value="1">
 
             
-            <!-- <label for="datum" id="datum-label">date</label> -->
           
             <input type="hidden" id="datum" name="datum">
 
             <input class="button" id="submit-btn" type='submit' value="Create">
          
 
-            <!-- <a class="button" href="/activeMatch">start match</a> -->
 
         </form>
     </section>
@@ -69,7 +62,7 @@
  
 
     <script src="/scripts/getTimeAndDate.js"></script>
-    <script src="/scripts/testing.js"></script>
+    <script src="/scripts/winner.js"></script>
 </body>
 
 

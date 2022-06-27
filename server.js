@@ -13,10 +13,10 @@ const bodyParser = require('body-parser')
 const { response } = require('express')
 
 const urlencodedParser = bodyParser.urlencoded({
-  extended: false
+  extended: true
 })
 
-// app.use(express.urlencoded({extended: true}))  
+app.use(express.urlencoded({extended: true}))  
 
 // Serve public files
 app.use(express.static('public'))
@@ -66,29 +66,17 @@ app.get('/victory', async (req, res) => {
 })
 
 
-app.get('/victory:winner', async (req, res) => {
-  //req.params.winner
-  scoreData = await fetchJson(URL).then(json => json.data)
-  res.render('victory', {
-    winner: req.params.winner || null
-  })
-  scoreData 
-})
-
-
 app.get('/activeMatch', async (req, res) => {
   
   scoreData = await fetchJson(URL).then(json => json.data)
-  // console.log(scoreData)
   res.render('activeMatch'),{
     scoreData
   }
 })
 
 
-
+// Sends a post request to the API
 app.post('/activeMatch', urlencodedParser, async (req, res) => {
-  // console.log('body', req.body);
 
   const postData = {
     method: 'POST',
@@ -97,28 +85,32 @@ app.post('/activeMatch', urlencodedParser, async (req, res) => {
       'Content-Type': 'application/json'
     }
   }
-
   await fetchJson(URL, postData).then(function (data) {
-    // console.log(data);
+
     res.render('readyUp', {
-      // matchId: 3,
-      // activity: 'req.body',
-      // team1: data.team1,
-      // //playersTeam1: ,
-      // scoreTeam1:'4',
-      // team2: data.team2,
-      // //playersTeam2: 'dave', 
-      // //scoreTeam2:'8',
-      // speeltijd : data.speeltijd
-      // datum:'2022-05-12' 
-      // p:data.speeltijd
-      
-   
+
     })
   })
 })
 
 
+
+// sends a delete request with specific matchId to the API
+app.post('/matchResults/:id', urlencodedParser, async (request,response) =>{
+const id = request.params.id
+  const deleteData = {
+    method: 'delete',
+    body: JSON.stringify(request.body.id),
+    headers: {'Content-Type': 'application/json'}
+  }
+  console.log(`Body: ${id}`)
+  await fetchJson(`${URL}/${id}`, deleteData).then(function (scoreData) {
+    console.log(scoreData);
+    response.render('matchResults', {
+
+    })
+  })
+})
 
 
 
@@ -129,9 +121,6 @@ const server = app.listen(app.get('port'), () => {
   console.log(`Application started on port: ${app.get('port')}`)
   console.log('http://localhost:1337');
 })
-
-
-
 
 
 async function fetchJson(url, data = {}) {
