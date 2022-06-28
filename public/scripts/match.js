@@ -9,9 +9,9 @@ let timer = document.querySelector('#timer')
 let score1 = 0;
 // sessionStorage.setItem("score1", score1)
 let score2 = 0
-// sessionStorage.setItem("score2", score2)
+sessionStorage.setItem("score2", score2)
 
-// console.log(buttonTeam1)
+console.log(buttonTeam1)
 
 
 buttonTeam1.addEventListener('click', () => {
@@ -77,3 +77,15 @@ function timerComplete() {
 
   document.location.href = "victory";
 }
+
+
+
+
+
+
+
+
+
+
+
+

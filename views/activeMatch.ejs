@@ -31,7 +31,16 @@
 </div>
 
 <div>
+    <form action="/match %>" id="team1Plus" method="post">
+       
+        <input type="hidden" name="matchId" id="matchId" value="<%= scoreData[scoreData.length - 1].matchId %>" >
+        <input type="hidden" name="scoreTeam1" id="scoreTeam1" value="<%= ++scoreData[scoreData.length - 1].scoreTeam1 %>">
+ 
   <button id="button-team1"><img  src="/assets/plusPoint.svg" alt="plus point"></button>
+
+</form>
+
+
   <button id="button-team2"><img  src="/assets/plusPoint.svg" alt="plus point"></button>
 
 </div>
