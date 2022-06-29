@@ -19,11 +19,7 @@
 
 body {
     background-color: var(--darkBlue);
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* height: 100vh; */
+
 }
 
 .container {
@@ -70,7 +66,7 @@ h2 {
 .button {
     height: 3rem;
     padding: 0 0.5rem;
-    background-color: var(--orange);
+    background-color: var(--lightBlue);
     border-radius: 10px;
     width: 100px;
     text-decoration: none;
@@ -82,11 +78,13 @@ h2 {
     font-weight: bold;
     margin-top: 2rem;
     text-align: center;
+    border: none;
 
 }
 
 .button:hover {
-    background-color: #bc8803;
+    background-color: var(--blue);
+    color: var(--white);
 }
 
 
@@ -117,12 +115,12 @@ button {
     border: none;
     background-color: var(--darkBlue);
     cursor: pointer;
-    transition: 0.4s;
+    /* transition: 0.4s; */
 }
 
-button:hover {
+/* button:hover {
     transform: scale(110%);
-}
+} */
 
 
 /* .add-player {
@@ -315,7 +313,8 @@ input {
     background-color: var(--darkBlue);
     padding: 1rem;
     border-radius: 10px;
-    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: bold;
 }
 
 .delete:hover{
@@ -345,4 +344,51 @@ input {
 #dash{
     color: var(--blue);
     font-size: 2rem;
+}
+
+
+
+.primaryBtn{
+
+    height: 3rem;
+    padding: 0 0.5rem;
+    background-color: var(--orange);
+    border-radius: 10px;
+    width: 10rem;
+    text-decoration: none;
+    color: var(--darkBlue);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.primaryBtn:hover {
+    background-color: #bc8803;
+}
+
+.secondaryBtn{
+
+    height: 3rem;
+    padding: 0 0.5rem;
+    background-color: var(--blue);
+    border-radius: 10px;
+    /* width: 100px; */
+    text-decoration: none;
+    color: var(--darkBlue);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.secondaryBtn:hover {
+    background-color:#18839d;
+    color: var(--white);
 }
