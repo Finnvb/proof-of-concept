@@ -8,12 +8,12 @@
 <h1 id="timer"> <%- scoreData[scoreData.length - 1].speeltijd %> </h1>
 
 
-<div>
+<div class="scoreContainer">
+
     <h2> Team <%- scoreData[scoreData.length - 1].team1 %> </h2>
-    <p> VS </p>
+    <p id="dash"> VS </p>
     <h2>Team <%- scoreData[scoreData.length - 1].team2 %></h2>
 
-    
 </div>
 
 <div>
@@ -24,31 +24,39 @@
 
 </div>
 
-<div>
+<!-- <div>
     <p id="score-team1"> <%- scoreData[scoreData.length - 1].scoreTeam1 %> </p>
     <p> - </p>
     <p id="score-team2"> <%- scoreData[scoreData.length - 1].scoreTeam2 %> </p>
+</div> -->
+
+
+
+
+<form action="/match%>" id="team1Plus" method="post">
+
+    <div class="scoreContainer">
+        <input type="text" class="score" id="scoreTeam1" value="0"> </input>
+        <p id="dash"> - </p>
+        <input type="text" class="score" id="scoreTeam2" value="0">  </input>
+    </div>
+
+    <input type="hidden" name="matchId" id="matchId" value="<%= scoreData[scoreData.length - 1].matchId %>" >
+<div>
+    <button id="button-team1" type="submit" form="team1Plus"><img  src="/assets/plusPoint.svg" alt="minus point"></button>
+    <button id="button-team2" type="submit" form="team1Plus"><img  src="/assets/plusPoint.svg" alt="minus point"></button>
 </div>
 
+
+
 <div>
-    <form action="/match %>" id="team1Plus" method="post">
-       
-        <input type="hidden" name="matchId" id="matchId" value="<%= scoreData[scoreData.length - 1].matchId %>" >
-        <input type="hidden" name="scoreTeam1" id="scoreTeam1" value="<%= ++scoreData[scoreData.length - 1].scoreTeam1 %>">
- 
-  <button id="button-team1"><img  src="/assets/plusPoint.svg" alt="plus point"></button>
+    <button id="minus-button-team1" type="submit" form="team1Plus"><img  src="/assets/minus.svg" alt="minus point"></button>
+    <button id="minus-button-team2" type="submit" form="team1Plus"><img  src="/assets/minus.svg" alt="minus point"></button>
+</div>
+
 
 </form>
 
-
-  <button id="button-team2"><img  src="/assets/plusPoint.svg" alt="plus point"></button>
-
-</div>
-
-<div>
-    <button id="minus-button-team1"><img  src="/assets/minus.svg" alt="minus point"></button>
-    <button id="minus-button-team2"><img  src="/assets/minus.svg" alt="minus point"></button>
-</div>
 
 </section>
 

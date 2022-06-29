@@ -35,7 +35,7 @@
             
             <form action="/matchResults/<%= scoreData[i].matchId %>" id="delete-form" method="post">
               
-                    <input type="number" id="matchId" value="<%= scoreData[i].matchId %>" >
+                    <input type="hidden" id="matchId" value="<%= scoreData[i].matchId %>" >
                     <button class="delete" type="submit"> Delete</button>
 
             </form>

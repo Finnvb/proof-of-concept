@@ -145,6 +145,29 @@ app.post('/match', urlencodedParser,  (request,response) =>{
     })
 
 
+    app.post('/match1', urlencodedParser,  (request,response) =>{
+      // const id = request.params.id
+    
+      console.log(request.body)
+    
+    
+        const patchData = {
+          method: 'PATCH',
+          body: JSON.stringify(request.body),
+          headers: {'Content-Type': 'application/json'}
+        }
+    
+        // console.log(fetchJson())
+         fetchJson(URL, patchData).then(scoreData) 
+          // console.log(scoreData);
+          response.render('activeMatch', {
+     
+            scoreData
+      
+          })
+        })
+
+
 
 
 app.set('port', process.env.PORT || 1337)
