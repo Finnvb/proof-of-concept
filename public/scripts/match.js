@@ -33,9 +33,9 @@ buttonTeam2.addEventListener('click', () => {
 });
 
 minusButtonTeam1.addEventListener('click', () => {
-  if (scoreTeam1Input.value > 0){
-  scoreTeam1Input.value--;
-  score1--;
+  if (scoreTeam1Input.value > 0) {
+    scoreTeam1Input.value--;
+    score1--;
   }
   console.log(`Score t1: ${score1}`)
   sessionStorage.setItem("score1", score1);
@@ -43,9 +43,9 @@ minusButtonTeam1.addEventListener('click', () => {
 });
 
 minusButtonTeam2.addEventListener('click', () => {
-  if (scoreTeam2Input.value > 0){
-  scoreTeam2Input.value--;
-  score2--
+  if (scoreTeam2Input.value > 0) {
+    scoreTeam2Input.value--;
+    score2--
   }
   console.log(`Score t2: ${score2}`)
   sessionStorage.setItem("score2", score2);
@@ -86,7 +86,7 @@ const URL = 'https://score.api.fdnd.nl/v1/match'
 
 const form = document.getElementById('team1Plus');
 form.addEventListener('submit', submitForm);
- 
+
 
 function submitForm(e) {
   e.preventDefault();

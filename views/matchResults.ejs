@@ -3,50 +3,46 @@
 <body>
 
     <section class="container">
-    <a href="/" class="go-back">
-        <img src="/assets/back-arrow.svg" alt="left-arrow">
-    </a>
+        <a href="/" class="go-back">
+            <img src="/assets/back-arrow.svg" alt="left-arrow">
+        </a>
 
 
 
-    <h1 class="header">Match results</h1>
+        <h1 class="header">Match results</h1>
+
+        <p>Overview of all your matches</p>
 
 
+        <div class="list-container">
 
+            <% for(var i=0; i<scoreData.length; i++) {%>
 
+            <ul class="matchResults">
 
+                <li><span>Activity: </span> <%= scoreData[i].activity %></li>
+                <li><span>team1: </span> <%= scoreData[i].team1 %></li>
+                <li><span>playersTeam1: </span> <%= scoreData[i].playersTeam1 %></li>
+                <li><span>scoreTeam1: </span> <%= scoreData[i].scoreTeam1 %></li>
+                <li><span>team2: </span> <%= scoreData[i].team2 %></li>
+                <li><span>playersTeam2: </span> <%= scoreData[i].playersTeam2 %></li>
+                <li><span>scoreTeam2: </span> <%= scoreData[i].scoreTeam2 %></li>
+                <li><span>totalTime: </span> <%= scoreData[i].speeltijd %> minutes</li>
+                <li><span>Date: </span> <%= scoreData[i].datum.substr(0,16) %></li>
 
+                <form action="/matchResults/<%= scoreData[i].matchId %>" id="delete-form" method="post">
 
-    <div class="list-container">
-       
-        <% for(var i=0; i<scoreData.length; i++) {%>
-       
-        <ul class="matchResults">
-           
-            <li><span>Activity: </span> <%= scoreData[i].activity %></li>
-            <li><span>team1: </span> <%= scoreData[i].team1 %></li>
-            <li><span>playersTeam1: </span> <%= scoreData[i].playersTeam1 %></li>
-            <li><span>scoreTeam1: </span> <%= scoreData[i].scoreTeam1 %></li>
-            <li><span>team2: </span> <%= scoreData[i].team2 %></li>
-            <li><span>playersTeam2: </span> <%= scoreData[i].playersTeam2 %></li>
-            <li><span>scoreTeam2: </span> <%= scoreData[i].scoreTeam2 %></li>
-            <li><span>totalTime: </span> <%= scoreData[i].speeltijd %> minutes</li>
-            <li><span>Date: </span> <%= scoreData[i].datum.substr(0,16) %></li>
-            
-            <form action="/matchResults/<%= scoreData[i].matchId %>" id="delete-form" method="post">
-              
-                    <input type="hidden" id="matchId" value="<%= scoreData[i].matchId %>" >
+                    <input type="hidden" id="matchId" value="<%= scoreData[i].matchId %>">
                     <button class="delete" type="submit"> Delete</button>
 
-            </form>
-     
-        </ul>
-   
-        <% } %>
-    </div>
+                </form>
 
-</section>
+            </ul>
 
+            <% } %>
+        </div>
+
+    </section>
 
 </body>
 

@@ -6,8 +6,9 @@
     <section class="container">
 
         <h1 class="header">Create a match</h1>
+        <p>Fill out the form to create a match</p>
         <form class="container" action="/activeMatch" id="matchForm" method="POST">
- 
+
 
             <label for="activity">Select activity</label>
             <select name="activity" id="activity">
@@ -16,50 +17,42 @@
                 <option value=" Football">Football</option>
                 <option value="Tennis">Tennis</option>
                 <option value="Hockey">Hockey</option>
+                <option value="Frisbee">Frisbee</option>
                 <option value="Volleyball">Volleyball</option>
+                <option value="Billiards">Billiards</option>
             </select>
 
 
-            <label for="team1">Team 1 name</label>
+            <label for="team1"> Name team 1</label>
             <input type="text" name="team1" id="team1" autocomplete="off" required>
 
-            <label for="playersTeam1">player Team 1</label>
+            <label for="playersTeam1">Player team 1</label>
             <input type="text" name="playersTeam1" id="playersTeam1" autocomplete="off" required>
 
-            
-       
+
             <input type="hidden" name="scoreTeam1" id="scoreTeam1" value="0">
 
 
-        
-
-            <label for="team2">Team 2 name</label>
+            <label for="team2">Name team 2</label>
             <input type="text" name="team2" id="team2" autocomplete="off" required>
 
-            <label for="playersTeam2">player Team 2</label>
+            <label for="playersTeam2">Player team 2</label>
             <input type="text" name="playersTeam2" id="playersTeam2" autocomplete="off" required>
 
 
-            
-    
             <input type="hidden" name="scoreTeam2" id="scoreTeam2" value="0">
 
-            <label for="speeltijd">total minutes</label>
-          
+            <label for="speeltijd">Total minutes</label>
             <input type="number" id="speeltijd" name="speeltijd" min="1" max="30" value="1">
 
-            
-          
             <input type="hidden" id="datum" name="datum">
 
             <input class="button" id="submit-btn" type='submit' value="Create">
-         
 
 
         </form>
     </section>
 
- 
 
     <script src="/scripts/getTimeAndDate.js"></script>
     <script src="/scripts/winner.js"></script>

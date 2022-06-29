@@ -2,20 +2,21 @@ let timer = document.querySelector('#timer')
 
 
 function startTimer(duration, display) {
-    let timer = duration, minutes, seconds;
+    let timer = duration,
+        minutes, seconds;
     setInterval(function () {
 
         seconds = parseInt(timer % 60, 10);
 
-        seconds = seconds < 10 ?  + seconds : seconds;
+        seconds = seconds < 10 ? +seconds : seconds;
 
-        display.textContent =  seconds;
+        display.textContent = seconds;
 
         if (--timer <= 0) {
-          
+
             timerComplete();
             timer = 0
-           
+
         }
     }, 1000);
 }
@@ -27,6 +28,6 @@ window.onload = function () {
 };
 
 
-function timerComplete(){
-  document.location.href = "activeMatch";
+function timerComplete() {
+    document.location.href = "activeMatch";
 }

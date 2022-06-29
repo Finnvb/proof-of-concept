@@ -27,7 +27,6 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-top: 2rem;
 }
 
 
@@ -88,8 +87,6 @@ h2 {
 }
 
 
-
-
 #activity {
     width: 10rem;
     height: 2rem;
@@ -115,24 +112,14 @@ button {
     border: none;
     background-color: var(--darkBlue);
     cursor: pointer;
-    /* transition: 0.4s; */
 }
 
-/* button:hover {
-    transform: scale(110%);
-} */
-
-
-/* .add-player {
-    margin-top: 2rem;
-} */
 
 form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    /* margin-top: 2rem; */
 }
 
 
@@ -239,7 +226,7 @@ input {
 }
 
 .container-test {
-    /* display: none; */
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -250,7 +237,7 @@ input {
 
 
 
-.matchResults{
+.matchResults {
     background-color: var(--orange);
     display: flex;
     flex-direction: column;
@@ -261,15 +248,15 @@ input {
 }
 
 
-.matchResults li{
+.matchResults li {
     color: var(--darkBlue);
     padding: 0.3rem 0;
 }
 
-.matchResults li span{
-   font-weight: bold;
-   color: var(--darkBlue);
-   
+.matchResults li span {
+    font-weight: bold;
+    color: var(--darkBlue);
+
 }
 
 
@@ -280,7 +267,7 @@ input {
     color: var(--darkBlue);
 }
 
-.center{
+.center {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -288,28 +275,29 @@ input {
     height: 100vh;
 }
 
-.scoreTeam1, .scoreTeam2{
+.scoreTeam1,
+.scoreTeam2 {
 
     text-align: center;
 }
 
 
-.hide{
+.hide {
     display: none;
 
 }
 
 
-.show{
+.show {
     display: flex;
 }
 
-#confettiBG p{
+#confettiBG p {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.delete{
+.delete {
     background-color: var(--darkBlue);
     padding: 1rem;
     border-radius: 10px;
@@ -317,14 +305,14 @@ input {
     font-weight: bold;
 }
 
-.delete:hover{
-    
+.delete:hover {
+
     background-color: var(--darkBlue);
     color: var(--orange);
 }
 
 
-.score{
+.score {
     color: var(--darkBlue);
     background-color: var(--blue);
     width: 4.5rem;
@@ -332,24 +320,24 @@ input {
     font-size: 2.5rem;
     border: none;
     border-radius: 10px;
-   
+
 }
 
-.scoreContainer{
+.scoreContainer {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#dash{
+#dash {
     color: var(--blue);
     font-size: 2rem;
 }
 
 
 
-.primaryBtn{
-
+.primaryBtn {
+    font-size: 1.3rem;
     height: 3rem;
     padding: 0 0.5rem;
     background-color: var(--orange);
@@ -362,21 +350,21 @@ input {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    margin-top: 2rem;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .primaryBtn:hover {
     background-color: #bc8803;
 }
 
-.secondaryBtn{
+.secondaryBtn {
 
     height: 3rem;
     padding: 0 0.5rem;
     background-color: var(--blue);
     border-radius: 10px;
-    /* width: 100px; */
+    width: 130px;
     text-decoration: none;
     color: var(--darkBlue);
     cursor: pointer;
@@ -384,11 +372,26 @@ input {
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     text-align: center;
 }
 
 .secondaryBtn:hover {
-    background-color:#18839d;
+    background-color: #18839d;
     color: var(--white);
+}
+
+
+.container p {
+    margin-top: 1rem;
+    color: var(--white);
+    font-size: 1.2rem;
+    width: 15rem;
+    text-align: center;
+    line-height: 1.5;
+
+}
+
+.logo-img {
+    margin-top: 2rem;
 }
