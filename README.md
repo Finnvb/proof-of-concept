@@ -49,7 +49,8 @@ nodemon start
 ## Bronnen
 
 - [UXWing](https://uxwing.com/)
-- [Google Fonts ](https://fonts.google.com/?query=montserrat)
+- - [svgrepo](https://www.svgrepo.com/))
+
 
 ## Licentie
 
