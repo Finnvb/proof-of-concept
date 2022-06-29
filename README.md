@@ -12,7 +12,7 @@ Met dit project kun je gemakkelijk de score bijhouden van een sportactiviteit, l
 
 ## Beschrijving
 
-![afbeelding](https://user-images.githubusercontent.com/26089533/175791729-d4fe6a96-57f5-4ad1-b8ab-f23b89bf941a.png)
+![Capture11](https://user-images.githubusercontent.com/26089533/176535001-7bdb3a82-7d86-4c15-ba93-7c9e137266e9.PNG)
 
 [Live versie](https://poc-score.herokuapp.com/)
 
@@ -49,7 +49,9 @@ nodemon start
 ## Bronnen
 
 - [UXWing](https://uxwing.com/)
-- [Google Fonts ](https://fonts.google.com/?query=montserrat)
+- [svgrepo](https://www.svgrepo.com/)
+- [NodeJS](https://nodejs.dev/)
+
 
 ## Licentie
 
