@@ -49,7 +49,7 @@ nodemon start
 ## Bronnen
 
 - [UXWing](https://uxwing.com/)
-- - [svgrepo](https://www.svgrepo.com/))
+- [svgrepo](https://www.svgrepo.com/)
 
 
 ## Licentie
