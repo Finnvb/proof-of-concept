@@ -8,13 +8,28 @@
         </a>
 
         <div id="confettiBG">
-             <p></p>
-         
-            <h1 class="scoreTeam1">Team <%= scoreData[scoreData.length - 1].team1 %> won! <br> <%= scoreData[scoreData.length - 1].playersTeam1 %> </h1>
-         
+            <p></p>
 
-            <h1 class="scoreTeam2">Team <%= scoreData[scoreData.length - 1].team2 %> won! <br> <%= scoreData[scoreData.length - 1].playersTeam2 %></h1>
-           
+            <% if(scoreData[scoreData.length - 1].scoreTeam1 > scoreData[scoreData.length - 1].scoreTeam2 ){%>
+
+            <h1 class="scoreTeam1">Team <%= scoreData[scoreData.length - 1].team1 %> won! <br>
+                <%= scoreData[scoreData.length - 1].playersTeam1 %> </h1>
+
+            <% } %>
+
+            <% if(scoreData[scoreData.length - 1].scoreTeam2 > scoreData[scoreData.length - 1].scoreTeam1 ){%>
+
+            <h1 class="scoreTeam2">Team <%= scoreData[scoreData.length - 1].team2 %> won! <br>
+                <%= scoreData[scoreData.length - 1].playersTeam2 %></h1>
+
+            <% } %>
+
+            <% if(scoreData[scoreData.length - 1].scoreTeam2 == scoreData[scoreData.length - 1].scoreTeam1 ){%>
+
+            <h1 class="scoreTeam2">It's a draw!</h1>
+
+            <% } %>
+
         </div>
 
         <button class="button">Share</button>

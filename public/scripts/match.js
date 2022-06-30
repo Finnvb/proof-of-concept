@@ -70,7 +70,7 @@ function startTimer(duration, display) {
   }, 1000);
 }
 window.onload = function () {
-  let totalTime = 60 * timer.innerHTML,
+  let totalTime = 10 * timer.innerHTML,
     display = document.querySelector('#timer');
   startTimer(totalTime, display);
 };
