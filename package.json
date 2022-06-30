@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "minify": "node minify/minify.js"
   },
   "repository": {
     "type": "git",
@@ -22,10 +23,14 @@
   },
   "homepage": "https://github.com/Finnvb/proof-of-concept#readme",
   "dependencies": {
+    "autoprefixer": "^10.4.7",
     "body-parser": "^1.20.0",
+    "compression": "^1.7.4",
+    "cssnano": "^5.1.12",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "node-fetch": "^3.2.6",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "postcss": "^8.4.14"
   }
 }
